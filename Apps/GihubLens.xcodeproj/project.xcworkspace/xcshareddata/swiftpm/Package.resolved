@@ -1,5 +1,5 @@
 {
-  "originHash" : "63ecff90fad8c6337aba11436e0b1b7fa9e1dc42497f11c66c234a9a336d3c4a",
+  "originHash" : "bb1a189d82c9cd0ff05673e78a4f3316e20c8f4dc009558c57c4bd62e6da0a69",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:jokerphuongnam/GithubLensNetworks.git",
       "state" : {
-        "revision" : "88ecb367fe96e0258474785b9b798119990c6e2d",
-        "version" : "1.0.1"
+        "revision" : "6237ee607d0ea8d748ae5db34a284cad21be9a58",
+        "version" : "1.0.2"
       }
     },
     {

@@ -2,6 +2,28 @@ enum Resource<T> {
     case loading
     case success(data: T)
     case failure(error: Error)
+    
+    var data: T? {
+        if case let .success(data) = self {
+            return data
+        }
+        return nil
+    }
+    
+    var error: Error? {
+        if case let .failure(error) = self {
+            return error
+        }
+        return nil
+    }
+    
+    func loadMore<E>(moreData: T) -> Self where T == Array<E> {
+        if var data {
+            data.append(contentsOf: moreData)
+            return .success(data: data)
+        }
+        return self
+    }
 }
 
 extension Resource: Equatable where T: Equatable {

@@ -43,7 +43,16 @@ struct GihubUsersScreen: View {
                     GithubUserItem(githubUser: user)
                         .frame(height: 100)
                         .removeDefaultListItem()
+                        .onAppear {
+                            if let _ = users[safe: users.count - 10] {
+                                viewModel.loadMore()
+                            }
+                        }
                 }
+                
+                loadMoreView
+                    .removeDefaultListItem()
+                    .frame(maxWidth: .infinity)
                 
                 Spacer()
                     .frame(height: 32)
@@ -61,8 +70,49 @@ struct GihubUsersScreen: View {
         EmptyView()
     }
     
+    @ViewBuilder private var loadMoreView: some View {
+        if let loadMoreState = viewModel.usersState.loadMoreState {
+            switch loadMoreState {
+            case .loading:
+                ProgressView()
+                    .frame(width: 24, height: 24)
+            case .error:
+                VStack(spacing: 8) {
+                    Text("Error load more user")
+                        .font(.system(size: 16))
+                        .foregroundStyle(Color(r: 237, g: 67, b: 55))
+                    
+                    Button {
+                        viewModel.resetLoadMore()
+                    } label: {
+                        Text("Retry?")
+                            .foregroundStyle(Color(r: 185, g: 205, b: 235))
+                            .font(.system(size: 14))
+                            .underline()
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
+            }
+        }
+    }
+    
     @ViewBuilder private func failure(error: Error) -> some View {
-        
+        VStack(spacing: 8) {
+            Text("Error load more user")
+                .font(.system(size: 16))
+                .foregroundStyle(Color(r: 237, g: 67, b: 55))
+            
+            Button {
+                viewModel.loadGitHubUsers()
+            } label: {
+                Text("Retry?")
+                    .foregroundStyle(Color(r: 185, g: 205, b: 235))
+                    .font(.system(size: 14))
+                    .underline()
+            }
+        }
     }
 }
 
