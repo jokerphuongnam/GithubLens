@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		71A0DAA42D75AEAC000C1366 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 71A0DAA32D75AEAC000C1366 /* Swinject */; };
+		71A0DAA92D75AFDD000C1366 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 71A0DAA82D75AFDD000C1366 /* SwinjectAutoregistration */; };
+		71AA79662D760C1300DB91CB /* GithubLensNetworks in Frameworks */ = {isa = PBXBuildFile; productRef = 71AA79652D760C1300DB91CB /* GithubLensNetworks */; };
+		71AA797C2D76E99600DB91CB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71AA797B2D76E99600DB91CB /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		71DCC2662D730DC000B256F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71AA797C2D76E99600DB91CB /* Kingfisher in Frameworks */,
+				71AA79662D760C1300DB91CB /* GithubLensNetworks in Frameworks */,
+				71A0DAA42D75AEAC000C1366 /* Swinject in Frameworks */,
+				71A0DAA92D75AFDD000C1366 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +83,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71AA79642D760C1300DB91CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71DCC24C2D730DBE00B256F4 = {
 			isa = PBXGroup;
 			children = (
 				71DCC2572D730DBE00B256F4 /* GihubLens */,
 				71DCC2682D730DC000B256F4 /* GihubLensTests */,
 				71DCC2722D730DC000B256F4 /* GihubLensUITests */,
+				71AA79642D760C1300DB91CB /* Frameworks */,
 				71DCC2562D730DBE00B256F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +131,10 @@
 			);
 			name = GihubLens;
 			packageProductDependencies = (
+				71A0DAA32D75AEAC000C1366 /* Swinject */,
+				71A0DAA82D75AFDD000C1366 /* SwinjectAutoregistration */,
+				71AA79652D760C1300DB91CB /* GithubLensNetworks */,
+				71AA797B2D76E99600DB91CB /* Kingfisher */,
 			);
 			productName = GihubLens;
 			productReference = 71DCC2552D730DBE00B256F4 /* GihubLens.app */;
@@ -196,7 +219,10 @@
 			mainGroup = 71DCC24C2D730DBE00B256F4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				71DCC2912D730E2800B256F4 /* XCLocalSwiftPackageReference "../Data" */,
+				71A0DAA22D75AEAC000C1366 /* XCRemoteSwiftPackageReference "Swinject" */,
+				71A0DAA72D75AFDD000C1366 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				71A0DAAB2D7608F4000C1366 /* XCRemoteSwiftPackageReference "GithubLensNetworks" */,
+				71AA797A2D76E99600DB91CB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71DCC2562D730DBE00B256F4 /* Products */;
@@ -562,12 +588,63 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		71DCC2912D730E2800B256F4 /* XCLocalSwiftPackageReference "../Data" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Data;
+/* Begin XCRemoteSwiftPackageReference section */
+		71A0DAA22D75AEAC000C1366 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+		71A0DAA72D75AFDD000C1366 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		71A0DAAB2D7608F4000C1366 /* XCRemoteSwiftPackageReference "GithubLensNetworks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:jokerphuongnam/GithubLensNetworks.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		71AA797A2D76E99600DB91CB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71A0DAA32D75AEAC000C1366 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71A0DAA22D75AEAC000C1366 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		71A0DAA82D75AFDD000C1366 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71A0DAA72D75AFDD000C1366 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		71AA79652D760C1300DB91CB /* GithubLensNetworks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71A0DAAB2D7608F4000C1366 /* XCRemoteSwiftPackageReference "GithubLensNetworks" */;
+			productName = GithubLensNetworks;
+		};
+		71AA797B2D76E99600DB91CB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71AA797A2D76E99600DB91CB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71DCC24D2D730DBE00B256F4 /* Project object */;
 }
