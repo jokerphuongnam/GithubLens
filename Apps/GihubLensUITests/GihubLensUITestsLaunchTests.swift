@@ -1,10 +1,3 @@
-//
-//  GihubLensUITestsLaunchTests.swift
-//  GihubLensUITests
-//
-//  Created by Phạm Phương Nam on 3/1/25.
-//
-
 import XCTest
 
 final class GihubLensUITestsLaunchTests: XCTestCase {
