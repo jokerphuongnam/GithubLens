@@ -2,9 +2,9 @@ import Testing
 @testable import GithubLensNetworks
 @testable import GithubLens
 
-@Suite("Test Github users repository")
+@Suite("Test GithubUsersRepository")
 struct GithubUsersRepositoryTests {
-    // MARK: - Test: make SUT
+    // MARK: - Make SUT
     private func makeSUT(fetchGithubUserHandler: @escaping (Int, Int) async throws -> [FetchGithubUsersResponse]) -> GithubUsersRepository {
         let mockNetwork = MockGithubNetwork(fetchGithubUserHandler: fetchGithubUserHandler)
         return GithubUsersRepositoryImpl(network: mockNetwork)
@@ -33,10 +33,10 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: Never.self) {
             // when
-            let respoonse = try await sut.getGithubUsers(page: page)
+            let response = try await sut.getGithubUsers(page: page)
             
             // then
-            #expect(respoonse.count == 0)
+            #expect(response.count == 0)
             let inputPerPage = try #require(inputPerPage)
             #expect(inputPerPage == 20)
             let inputSince = try #require(inputSince)
