@@ -16,6 +16,8 @@ final class DIManager {
         container.autoregister(GithubUsersRepository.self, initializer: GithubUsersRepositoryImpl.init).inObjectScope(.container)
         
         container.autoregister(GithubUsersUserCase.self, initializer: GithubUsersUserCaseImpl.init).inObjectScope(.container)
+        
+        container.autoregister(GithubUserDetailsUseCase.self, initializer: GithubUserDetailsUseCaseImpl.init).inObjectScope(.container)
     }
     
     class func get<T>() -> T {

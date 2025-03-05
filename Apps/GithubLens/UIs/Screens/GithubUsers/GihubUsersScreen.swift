@@ -2,6 +2,7 @@ import SwiftUI
 
 struct GihubUsersScreen: View {
     private let viewModel: GihubUsersViewModel
+    @Environment(\.routes) private var routes
     
     init(viewModel: GihubUsersViewModel) {
         self.viewModel = viewModel
@@ -22,7 +23,7 @@ struct GihubUsersScreen: View {
         case .success(let data):
             githubUsers(users: data)
         case .failure(let error):
-            failure(error: error)
+            failureView(error: error)
         }
     }
     
@@ -40,14 +41,19 @@ struct GihubUsersScreen: View {
                     .removeDefaultListItem()
                 
                 ForEach(users, id: \.login) { user in
-                    GithubUserItem(githubUser: user)
-                        .frame(height: 100)
-                        .removeDefaultListItem()
-                        .onAppear {
-                            if let _ = users[safe: users.count - 10] {
-                                viewModel.loadMore()
+                    Button {
+                        routes.wrappedValue.append(Route.details(user.login))
+                    } label: {
+                        GithubUserItem(githubUser: user)
+                            .frame(height: 100)
+                            .onAppear {
+                                if let _ = users[safe: users.count - 10] {
+                                    viewModel.loadMore()
+                                }
                             }
-                        }
+                    }
+                    .buttonStyle(.plain)
+                    .removeDefaultListItem()
                 }
                 
                 loadMoreView
@@ -98,9 +104,9 @@ struct GihubUsersScreen: View {
         }
     }
     
-    @ViewBuilder private func failure(error: Error) -> some View {
+    @ViewBuilder private func failureView(error: Error) -> some View {
         VStack(spacing: 8) {
-            Text("Error load more user")
+            Text("Error load users")
                 .font(.system(size: 16))
                 .foregroundStyle(Color(r: 237, g: 67, b: 55))
             
