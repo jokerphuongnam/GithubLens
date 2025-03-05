@@ -1,13 +1,7 @@
-//
-//  GihubLensUITests.swift
-//  GihubLensUITests
-//
-//  Created by Phạm Phương Nam on 3/1/25.
-//
-
 import XCTest
+@testable import GithubLens
 
-final class GihubLensUITests: XCTestCase {
+final class GithubLensUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
