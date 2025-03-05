@@ -1,7 +1,7 @@
 @testable import GithubLens
 
 extension GithubUsersUserCaseTests {
-    class MockGithubUsersRepository: GithubUsersRepository {
+    final class MockGithubUsersRepository: GithubUsersRepository {
         private let getGithubUsersHandler: (_ page: Int) async throws -> [GithubUser]
         
         init(getGithubUsersHandler: @escaping (_ page: Int) async throws -> [GithubUser]) {

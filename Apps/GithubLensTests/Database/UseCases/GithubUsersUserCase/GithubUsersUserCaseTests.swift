@@ -7,7 +7,6 @@ struct GithubUsersUserCaseTests {
     // MARK: - Make SUT
     private func makeSUT(getGithubUsersHandler: @escaping (_ page: Int) async throws -> [GithubUser]) -> GithubUsersUserCase {
         let mockRepository = MockGithubUsersRepository(getGithubUsersHandler: getGithubUsersHandler)
-        
         return GithubUsersUserCaseImpl(githubUsersRepository: mockRepository)
     }
     
