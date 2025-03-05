@@ -17,10 +17,10 @@ struct GithubUsersRepositoryTests {
     
     // MARK: - Test: fetchGithubUser
     @Test(
-        "Test parameters per page and since of FetchGithubUsers",
+        "Test parameters per page and since of getGithubUsers",
         arguments: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     )
-    func fetchGithubUserParameters(page: Int) async {
+    func getGithubUsersParameters(page: Int) async {
         // given
         var inputPerPage: Int?
         var inputSince: Int?
@@ -33,7 +33,7 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: Never.self) {
             // when
-            let respoonse = try await sut.fetchGithubUser(page: page)
+            let respoonse = try await sut.getGithubUsers(page: page)
             
             // then
             #expect(respoonse.count == 0)
@@ -46,10 +46,10 @@ struct GithubUsersRepositoryTests {
     
     
     @Test(
-        "Test FetchGithubUsers size of returned users",
+        "Test getGithubUsers size of returned users",
         arguments: [0, 20, 40, 60]
     )
-    func fetchGithubUserSizeOfReturnUsers(count: Int) async {
+    func getGithubUsersSizeOfReturnUsers(count: Int) async {
         // given
         let sut = makeSUT { perPage, since in
                 .init(count: count)
@@ -57,7 +57,7 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: Never.self) {
             // when
-            let response = try await sut.fetchGithubUser(page: 0)
+            let response = try await sut.getGithubUsers(page: 0)
             
             // then
             #expect(count == response.count)
@@ -65,11 +65,11 @@ struct GithubUsersRepositoryTests {
     }
     
     @Test(
-        "Test fetchGithubUser returns expected users",
+        "Test getGithubUsers returns expected users",
         arguments: [0, 10, 20, 40, 60],
         [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     )
-    func fetchGithubUserReturnsExpectedUsers(count: Int, page: Int) async {
+    func getGithubUsersReturnsExpectedUsers(count: Int, page: Int) async {
         // given
         let arrayOfUsers: [FetchGithubUsersResponse] = .init(count: count)
         let githubUsers = arrayOfUsers.map { $0.githubUser }
@@ -80,7 +80,7 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: Never.self) {
             // when
-            let response = try await sut.fetchGithubUser(page: page)
+            let response = try await sut.getGithubUsers(page: page)
             
             // then
             #expect(count == response.count)
@@ -92,7 +92,7 @@ struct GithubUsersRepositoryTests {
     }
     
     @Test(
-        "Test fetchGithubUser throws errors",
+        "Test getGithubUsers throws errors",
         arguments: [
             AFNetworkError.serverError,
             AFNetworkError.timeout,
@@ -100,7 +100,7 @@ struct GithubUsersRepositoryTests {
             AFNetworkError.notFound
         ]
     )
-    func fetchGithubUserThrowsError(error: AFNetworkError) async {
+    func getGithubUsersThrowsError(error: AFNetworkError) async {
         // given
         let error = error
         
@@ -110,14 +110,13 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: error) {
             // when
-            try await sut.fetchGithubUser(page: 0)
+            try await sut.getGithubUsers(page: 0)
         }
     }
     
-    // MARK: - Test: fetchGithubUserDetails
-    
+    // MARK: - Test: getGithubUserDetails
     @Test(
-        "Test fetchGithubUser returns expected user details",
+        "Test getGithubUserDetails returns expected user details",
         arguments: [
             "",
             "Test",
@@ -125,7 +124,7 @@ struct GithubUsersRepositoryTests {
             "Test long username is here"
         ]
     )
-    func fetchGithubUserDetailsParameter(loginUsername: String) async {
+    func getGithubUserDetailsParameter(loginUsername: String) async {
         // given
         var inputLoginUsername: String?
         
@@ -136,7 +135,7 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: Never.self) {
             // when
-            let response = try await sut.fetchGithubUserDetails(loginUsername: loginUsername)
+            let response = try await sut.getGithubUserDetails(loginUsername: loginUsername)
             
             // then
             let inputLoginUsername = try #require(inputLoginUsername)
@@ -146,7 +145,7 @@ struct GithubUsersRepositoryTests {
     }
     
     @Test(
-        "Test fetchGithubUserDetails returns expected user details",
+        "Test getGithubUserDetails returns expected user details",
         arguments: [
             "",
             "Test",
@@ -154,7 +153,7 @@ struct GithubUsersRepositoryTests {
             "Test long username is here"
         ]
     )
-    func fetchGithubUserDetailsReturnsExpectedUserDetails(loginUsername: String) async {
+    func getGithubUserDetailsReturnsExpectedUserDetails(loginUsername: String) async {
         // given
         let mockUserDetails = FetchGithubUserDetailsResponse(randomBy: loginUsername)
         
@@ -164,7 +163,7 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: Never.self) {
             // when
-            let response = try await sut.fetchGithubUserDetails(loginUsername: loginUsername)
+            let response = try await sut.getGithubUserDetails(loginUsername: loginUsername)
             
             // then
             #expect(response.login == loginUsername)
@@ -177,7 +176,7 @@ struct GithubUsersRepositoryTests {
     }
     
     @Test(
-        "Test fetchGithubUser throws errors",
+        "Test getGithubUserDetails throws errors",
         arguments: [
             AFNetworkError.serverError,
             AFNetworkError.timeout,
@@ -185,7 +184,7 @@ struct GithubUsersRepositoryTests {
             AFNetworkError.notFound
         ]
     )
-    func fetchGithubUserDetailsThrowsError(error: AFNetworkError) async {
+    func getGithubUserDetailsThrowsError(error: AFNetworkError) async {
         // given
         let error = error
         
@@ -195,7 +194,7 @@ struct GithubUsersRepositoryTests {
         
         await #expect(throws: error) {
             // when
-            try await sut.fetchGithubUserDetails(loginUsername: "")
+            try await sut.getGithubUserDetails(loginUsername: "")
         }
     }
 }

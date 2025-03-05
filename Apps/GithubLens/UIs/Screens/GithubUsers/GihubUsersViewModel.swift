@@ -24,7 +24,7 @@ final class GihubUsersViewModel {
     
     func refreshGitHubUsers() async {
         do {
-            let users = try await useCase.fetchGithubUser(page: usersState.page)
+            let users = try await useCase.getGithubUsers(page: usersState.page)
             Task { @MainActor [weak self] in
                 guard let self else { return }
                 self.usersState.resource = .success(data: users)
@@ -50,7 +50,7 @@ final class GihubUsersViewModel {
             }
             
             do {
-                let users = try await self.useCase.fetchGithubUser(page: self.usersState.page)
+                let users = try await self.useCase.getGithubUsers(page: self.usersState.page)
                 if users.isEmpty {
                     Task { @MainActor [weak self] in
                         guard let self else { return }

@@ -1,8 +1,8 @@
 import GithubLensNetworks
 
 protocol GithubUsersRepository {
-    func fetchGithubUser(page: Int) async throws -> [GithubUser]
-    func fetchGithubUserDetails(loginUsername: String) async throws -> GithubUserDetails
+    func getGithubUsers(page: Int) async throws -> [GithubUser]
+    func getGithubUserDetails(loginUsername: String) async throws -> GithubUserDetails
 }
 
 struct GithubUsersRepositoryImpl: GithubUsersRepository {
@@ -13,12 +13,12 @@ struct GithubUsersRepositoryImpl: GithubUsersRepository {
         self.network = network
     }
     
-    func fetchGithubUser(page: Int) async throws -> [GithubUser] {
+    func getGithubUsers(page: Int) async throws -> [GithubUser] {
         let since = page * perPage
         return try await network.fetchGithubUser(perPage: perPage, since: since).map { $0.githubUser }
     }
     
-    func fetchGithubUserDetails(loginUsername: String) async throws -> GithubUserDetails {
+    func getGithubUserDetails(loginUsername: String) async throws -> GithubUserDetails {
         try await network.fetchGithubUserDetails(loginUsername: loginUsername).githubUserDetails
     }
 }

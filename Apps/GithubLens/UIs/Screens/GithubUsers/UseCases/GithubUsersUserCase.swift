@@ -1,5 +1,5 @@
 protocol GithubUsersUserCase {
-    func fetchGithubUser(page: Int) async throws -> [GithubUser]
+    func getGithubUsers(page: Int) async throws -> [GithubUser]
 }
 
 struct GithubUsersUserCaseImpl: GithubUsersUserCase {
@@ -9,7 +9,7 @@ struct GithubUsersUserCaseImpl: GithubUsersUserCase {
         self.githubUsersRepository = githubUsersRepository
     }
     
-    func fetchGithubUser(page: Int) async throws -> [GithubUser] {
-        try await githubUsersRepository.fetchGithubUser(page: page)
+    func getGithubUsers(page: Int) async throws -> [GithubUser] {
+        try await githubUsersRepository.getGithubUsers(page: page)
     }
 }
