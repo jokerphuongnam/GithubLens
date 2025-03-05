@@ -1,6 +1,6 @@
 import XCTest
 
-final class GihubLensUITestsLaunchTests: XCTestCase {
+final class GithubLensUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

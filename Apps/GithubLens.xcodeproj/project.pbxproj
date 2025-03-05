@@ -31,25 +31,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		71DCC2552D730DBE00B256F4 /* GihubLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GihubLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71DCC2652D730DC000B256F4 /* GihubLensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GihubLensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71DCC26F2D730DC000B256F4 /* GihubLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GihubLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71DCC2552D730DBE00B256F4 /* GithubLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71DCC2652D730DC000B256F4 /* GithubLensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubLensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71DCC26F2D730DC000B256F4 /* GithubLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		71DCC2572D730DBE00B256F4 /* GihubLens */ = {
+		71DCC2572D730DBE00B256F4 /* GithubLens */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GihubLens;
+			path = GithubLens;
 			sourceTree = "<group>";
 		};
-		71DCC2682D730DC000B256F4 /* GihubLensTests */ = {
+		71DCC2682D730DC000B256F4 /* GithubLensTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GihubLensTests;
+			path = GithubLensTests;
 			sourceTree = "<group>";
 		};
-		71DCC2722D730DC000B256F4 /* GihubLensUITests */ = {
+		71DCC2722D730DC000B256F4 /* GithubLensUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GihubLensUITests;
+			path = GithubLensUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -83,20 +83,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		71AA79642D760C1300DB91CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		71DCC24C2D730DBE00B256F4 = {
 			isa = PBXGroup;
 			children = (
-				71DCC2572D730DBE00B256F4 /* GihubLens */,
-				71DCC2682D730DC000B256F4 /* GihubLensTests */,
-				71DCC2722D730DC000B256F4 /* GihubLensUITests */,
-				71AA79642D760C1300DB91CB /* Frameworks */,
+				71DCC2572D730DBE00B256F4 /* GithubLens */,
+				71DCC2682D730DC000B256F4 /* GithubLensTests */,
+				71DCC2722D730DC000B256F4 /* GithubLensUITests */,
 				71DCC2562D730DBE00B256F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,9 +96,9 @@
 		71DCC2562D730DBE00B256F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71DCC2552D730DBE00B256F4 /* GihubLens.app */,
-				71DCC2652D730DC000B256F4 /* GihubLensTests.xctest */,
-				71DCC26F2D730DC000B256F4 /* GihubLensUITests.xctest */,
+				71DCC2552D730DBE00B256F4 /* GithubLens.app */,
+				71DCC2652D730DC000B256F4 /* GithubLensTests.xctest */,
+				71DCC26F2D730DC000B256F4 /* GithubLensUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71DCC2542D730DBE00B256F4 /* GihubLens */ = {
+		71DCC2542D730DBE00B256F4 /* GithubLens */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71DCC2792D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GihubLens" */;
+			buildConfigurationList = 71DCC2792D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GithubLens" */;
 			buildPhases = (
 				71DCC2512D730DBE00B256F4 /* Sources */,
 				71DCC2522D730DBE00B256F4 /* Frameworks */,
@@ -127,9 +119,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				71DCC2572D730DBE00B256F4 /* GihubLens */,
+				71DCC2572D730DBE00B256F4 /* GithubLens */,
 			);
-			name = GihubLens;
+			name = GithubLens;
 			packageProductDependencies = (
 				71A0DAA32D75AEAC000C1366 /* Swinject */,
 				71A0DAA82D75AFDD000C1366 /* SwinjectAutoregistration */,
@@ -137,12 +129,12 @@
 				71AA797B2D76E99600DB91CB /* Kingfisher */,
 			);
 			productName = GihubLens;
-			productReference = 71DCC2552D730DBE00B256F4 /* GihubLens.app */;
+			productReference = 71DCC2552D730DBE00B256F4 /* GithubLens.app */;
 			productType = "com.apple.product-type.application";
 		};
-		71DCC2642D730DC000B256F4 /* GihubLensTests */ = {
+		71DCC2642D730DC000B256F4 /* GithubLensTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71DCC27C2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GihubLensTests" */;
+			buildConfigurationList = 71DCC27C2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GithubLensTests" */;
 			buildPhases = (
 				71DCC2612D730DC000B256F4 /* Sources */,
 				71DCC2622D730DC000B256F4 /* Frameworks */,
@@ -154,18 +146,18 @@
 				71DCC2672D730DC000B256F4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				71DCC2682D730DC000B256F4 /* GihubLensTests */,
+				71DCC2682D730DC000B256F4 /* GithubLensTests */,
 			);
-			name = GihubLensTests;
+			name = GithubLensTests;
 			packageProductDependencies = (
 			);
 			productName = GihubLensTests;
-			productReference = 71DCC2652D730DC000B256F4 /* GihubLensTests.xctest */;
+			productReference = 71DCC2652D730DC000B256F4 /* GithubLensTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		71DCC26E2D730DC000B256F4 /* GihubLensUITests */ = {
+		71DCC26E2D730DC000B256F4 /* GithubLensUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71DCC27F2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GihubLensUITests" */;
+			buildConfigurationList = 71DCC27F2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GithubLensUITests" */;
 			buildPhases = (
 				71DCC26B2D730DC000B256F4 /* Sources */,
 				71DCC26C2D730DC000B256F4 /* Frameworks */,
@@ -177,13 +169,13 @@
 				71DCC2712D730DC000B256F4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				71DCC2722D730DC000B256F4 /* GihubLensUITests */,
+				71DCC2722D730DC000B256F4 /* GithubLensUITests */,
 			);
-			name = GihubLensUITests;
+			name = GithubLensUITests;
 			packageProductDependencies = (
 			);
 			productName = GihubLensUITests;
-			productReference = 71DCC26F2D730DC000B256F4 /* GihubLensUITests.xctest */;
+			productReference = 71DCC26F2D730DC000B256F4 /* GithubLensUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 71DCC2502D730DBE00B256F4 /* Build configuration list for PBXProject "GihubLens" */;
+			buildConfigurationList = 71DCC2502D730DBE00B256F4 /* Build configuration list for PBXProject "GithubLens" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -229,9 +221,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71DCC2542D730DBE00B256F4 /* GihubLens */,
-				71DCC2642D730DC000B256F4 /* GihubLensTests */,
-				71DCC26E2D730DC000B256F4 /* GihubLensUITests */,
+				71DCC2542D730DBE00B256F4 /* GithubLens */,
+				71DCC2642D730DC000B256F4 /* GithubLensTests */,
+				71DCC26E2D730DC000B256F4 /* GithubLensUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,12 +279,12 @@
 /* Begin PBXTargetDependency section */
 		71DCC2672D730DC000B256F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 71DCC2542D730DBE00B256F4 /* GihubLens */;
+			target = 71DCC2542D730DBE00B256F4 /* GithubLens */;
 			targetProxy = 71DCC2662D730DC000B256F4 /* PBXContainerItemProxy */;
 		};
 		71DCC2712D730DC000B256F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 71DCC2542D730DBE00B256F4 /* GihubLens */;
+			target = 71DCC2542D730DBE00B256F4 /* GithubLens */;
 			targetProxy = 71DCC2702D730DC000B256F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -424,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GihubLens/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GithubLens/Preview Content\"";
 				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -438,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GihubLens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GithubLens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -453,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GihubLens/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GithubLens/Preview Content\"";
 				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -467,7 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GihubLens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GithubLens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -485,12 +477,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GihubLensTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GithubLensTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GihubLens.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GihubLens";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubLens.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GithubLens";
 			};
 			name = Debug;
 		};
@@ -504,12 +496,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GihubLensTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GithubLensTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GihubLens.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GihubLens";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubLens.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GithubLens";
 			};
 			name = Release;
 		};
@@ -521,7 +513,7 @@
 				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GihubLensUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GithubLensUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -538,7 +530,7 @@
 				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GihubLensUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.GithubLensUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -550,7 +542,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71DCC2502D730DBE00B256F4 /* Build configuration list for PBXProject "GihubLens" */ = {
+		71DCC2502D730DBE00B256F4 /* Build configuration list for PBXProject "GithubLens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71DCC2772D730DC000B256F4 /* Debug */,
@@ -559,7 +551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71DCC2792D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GihubLens" */ = {
+		71DCC2792D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GithubLens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71DCC27A2D730DC000B256F4 /* Debug */,
@@ -568,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71DCC27C2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GihubLensTests" */ = {
+		71DCC27C2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GithubLensTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71DCC27D2D730DC000B256F4 /* Debug */,
@@ -577,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71DCC27F2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GihubLensUITests" */ = {
+		71DCC27F2D730DC000B256F4 /* Build configuration list for PBXNativeTarget "GithubLensUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71DCC2802D730DC000B256F4 /* Debug */,

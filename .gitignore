@@ -9,4 +9,3 @@ DerivedData/
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
 Package.resolved
->>>>>>> ab6bc72 (Implement github users screen)

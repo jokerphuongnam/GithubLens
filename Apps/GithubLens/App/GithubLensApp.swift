@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct GihubLensApp: App {
+struct GithubLensApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     
     var body: some Scene {
